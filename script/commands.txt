@@ -1,0 +1,1 @@
+python image.py /home/jovyan/eumdac_data_store/downloads night_microphysics 2024-08-18T02:50:00Z "5,20,35,45" 2000
