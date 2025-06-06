@@ -62,14 +62,14 @@ if __name__ == '__main__':
         AOI = define_AOI(min_lon,max_lon,min_lat,max_lat,resolution)
         scn_resample=scn.resample(AOI) # nearest neighbor interpolator
         scn_resample.save_dataset(ch, filename='plots/fci_%s_%s.png' % (ch,datetime.strftime(start_time,"%Y%m%dT%H%M%SZ")),
-                       overlay={'coast_dir':'/data/Weather/etc/gshhg-shp-2.3.7','color':'black','resolution':'l', 'width': 1.5})
+        overlay={'coast_dir':'/home/jovyan/coastlines/data/Weather/etc/gshhg-shp-2.3.7','color':'black','resolution':'l', 'width': 1.5})
     else:
         if (predefined_region):
             scn_resample=scn.resample(coords)
             scn_resample.save_dataset(ch, filename='plots/fci_%s_%s_%s.png' % (ch,coords,datetime.strftime(start_time,"%Y%m%dT%H%M%SZ")),
-                       overlay={'coast_dir':'/data/Weather/etc/gshhg-shp-2.3.7','color':'black','resolution':'l', 'width': 1.5})
+            overlay={'coast_dir':'/home/jovyan/coastlines/data/Weather/etc/gshhg-shp-2.3.7','color':'black','resolution':'l', 'width': 1.5})
         else:
             scn2=scn.resample()
             scn2.save_dataset(ch, filename='plots/fci_%s_%s.png' % (ch,datetime.strftime(start_time,"%Y%m%dT%H%M%SZ")),
-                       overlay={'coast_dir':'/data/Weather/etc/gshhg-shp-2.3.7','color':'black','resolution':'l', 'width': 1.5})
+            overlay={'coast_dir':'/home/jovyan/coastlines/data/Weather/etc/gshhg-shp-2.3.7','color':'black','resolution':'l', 'width': 1.5})
     
