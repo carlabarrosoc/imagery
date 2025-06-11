@@ -1,1 +1,2 @@
-python image.py /home/jovyan/eumdac_data_store/downloads night_microphysics 2024-08-18T02:50:00Z "5,20,35,45" 2000
+python image.py /data/Weather/script/ fire_temperature 2025-03-28T12:40:00Z "15,25,40,50" 2000
+python image.py /data/Weather/script/ fire_temperature 2025-03-28T13:10:00Z "15,25,40,50" 2000
