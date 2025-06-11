@@ -101,6 +101,7 @@ if __name__ == '__main__':
         plt.margins(0,0)
         plt.gca().xaxis.set_major_locator(plt.NullLocator())
         plt.gca().yaxis.set_major_locator(plt.NullLocator())
+        os.makedirs(ch, exist_ok=True)
         plt.savefig("%s/%s.png"%(ch,scn_resample[ch].attrs["start_time"].strftime("%Y-%m-%dT%H.%M.%SZ")) , bbox_inches = 'tight',
         pad_inches = 0, dpi=300)    
     else:
@@ -127,6 +128,7 @@ if __name__ == '__main__':
             plt.margins(0,0)
             plt.gca().xaxis.set_major_locator(plt.NullLocator())
             plt.gca().yaxis.set_major_locator(plt.NullLocator())
+            os.makedirs(ch, exist_ok=True)
             plt.savefig("%s/%s.png"%(ch,scn_resample[ch].attrs["start_time"].strftime("%Y-%m-%dT%H.%M.%SZ")), bbox_inches = 'tight',
             pad_inches = 0)    
         
@@ -155,6 +157,7 @@ if __name__ == '__main__':
             plt.gca().yaxis.set_major_locator(plt.NullLocator())
             fig = plt.gcf()
             fig.patch.set_alpha(0.0)
+            os.makedirs(ch, exist_ok=True)
             fig.savefig("%s/%s.png"%(ch,scn_resample[ch].attrs["start_time"].strftime("%Y-%m-%dT%H.%M.%SZ")), bbox_inches = 'tight',
             pad_inches = 0)     
     
